@@ -46,6 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     }
 
     public void updateUserList(final ArrayList<DataModel> userArrayList) {
+        Log.e("Step4", "__________________________");
         this.arrayList.clear();
         this.arrayList = userArrayList;
         notifyDataSetChanged();

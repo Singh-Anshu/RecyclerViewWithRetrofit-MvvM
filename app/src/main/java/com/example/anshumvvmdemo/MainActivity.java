@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
         binding.recyclerView.setAdapter(adapter);
 
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        Log.e("Step1", "__________________________");
+
         viewModel.getUserMutableLiveData().observe(MainActivity.this, userListUpdateObserver);
 
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner {
             new Observer<ArrayList<DataModel>>() {
                 @Override
                 public void onChanged(ArrayList<DataModel> responseClasses) {
-                    Log.e("Step2", "__________________________");
+                    Log.e("Step3", "__________________________");
                     adapter.updateUserList(responseClasses);
                 }
             };

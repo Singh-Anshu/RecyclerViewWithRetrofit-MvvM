@@ -22,7 +22,8 @@ public class MainViewModel extends ViewModel {
 
 
     public MainViewModel() {
-        Log.e("Step3", "__________________________");
+
+        Log.e("Step1", "__________________________");
         userLiveData = new MutableLiveData<>();
         init();
     }
@@ -37,7 +38,7 @@ public class MainViewModel extends ViewModel {
     }
 
     public void getDetails(){
-        Log.e("Step4", "__________________________");
+        Log.e("Step2", "__________________________");
         try{
             RetrofitInstance.getInstance().getMyApi().getUserDetails()
                     .enqueue(new Callback<ResponseClass>() {
